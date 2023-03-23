@@ -1,0 +1,72 @@
+.button {
+	@include button;
+
+	&--medium {
+		width: 177px;
+	}
+
+	&:hover {
+		color: rgba(229, 79, 58, 1);
+	}
+}
+
+.button::before {
+	content: "";
+	display: block;
+	width: 112px;
+	height: 64%;
+	background-color: rgba(241, 137, 123, 0.3);
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 5;
+}
+
+.button:hover::before {
+	background-color: rgba(229, 79, 58, 0.3);
+}
+
+.button--medium::before {
+	width: 172px;
+}
+
+.button-content {
+	&--bigger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid rgba(228, 228, 228, 1);
+		width: 41%;
+		height: 90px;
+
+		&:hover {
+			border-color: rgba(229, 79, 58, 1);
+		}
+
+		&:hover .button {
+			color: rgba(229, 79, 58, 1);
+		}
+
+		&:hover .button::before {
+			background-color: rgba(229, 79, 58, 0.3);
+		}
+	}
+}
+
+.btn-video-play {
+	background: transparent;
+	cursor: pointer;
+
+	.icon-play {
+		fill: #262a3f;
+	}
+
+	&:hover .icon-play {
+		fill: #0d0f23;
+	}
+
+	&--toggle .icon-play {
+		display: none;
+		z-index: -1;
+	}
+}

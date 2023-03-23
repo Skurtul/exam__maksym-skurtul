@@ -1,0 +1,42 @@
+@mixin title-section {
+	color: $primary-color-light;
+	font-family: $title-font;
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 400;
+}
+
+@mixin title-oblique {
+	color: $accent-color-light;
+	font-family: $title-font;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin subtitle {
+	color: rgba(38, 42, 63, 0.8);
+	font-family: $subtitle-font;
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: 300;
+}
+
+@mixin button {
+	display: block;
+	position: relative;
+	max-height: 20px;
+	width: 117px;
+	color: $soft-color-light;
+	font-family: $subtitle-font;
+	font-size: 20px;
+	line-height: 100%;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-align: inherit;
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	padding: 0;
+	background-color: transparent;
+}

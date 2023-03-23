@@ -1,0 +1,121 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 40%;
+}
+
+.input {
+	display: block;
+	width: 100%;
+	padding: 12px 0 12px 0;
+	@include subtitle;
+	line-height: 20px;
+	max-height: 48px;
+	border: none;
+	border-bottom: 1px solid rgba(38, 42, 63, 0.1);
+
+	&::placeholder {
+		@include title-oblique;
+		color: rgba(38, 42, 63, 0.5);
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.08em;
+	}
+
+	&::-webkit-input-placeholder {
+		@include title-oblique;
+		color: rgba(38, 42, 63, 0.5);
+		font-size: 18px;
+		letter-spacing: 0.08em;
+	}
+
+	&::-moz-placeholder {
+		@include title-oblique;
+		color: rgba(38, 42, 63, 0.5);
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.08em;
+	}
+
+	&:-ms-input-placeholder {
+		@include title-oblique;
+		color: rgba(38, 42, 63, 0.5);
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.08em;
+	}
+
+	&:focus {
+		outline-style: unset;
+		border-bottom: 1px solid rgba(38, 42, 63, 0.45);
+	}
+}
+
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input:focus::-o-input-placeholder {
+	color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+	color: transparent;
+}
+
+textarea {
+	resize: none;
+}
+
+textarea:focus::-moz-placeholder {
+	color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+textarea:focus::-o-input-placeholder {
+	color: transparent;
+}
+
+textarea:focus::-ms-input-placeholder {
+	color: transparent;
+}
+
+input:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+input:valid:not(:placeholder-shown) {
+	border-color: green;
+}
+
+.form__item-message {
+	@include subtitle;
+	color: rgba(38, 42, 63, 0.7);
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 14px;
+}
+.form__item-error {
+	color: #eb5757;
+	display: none;
+}
+
+.input:invalid + .form__item-message .form__item-hint {
+	display: none;
+}
+.input:invalid + .form__item-message .form__item-error {
+	display: inline-block;
+}
