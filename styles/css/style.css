@@ -630,6 +630,9 @@ input:valid:not(:placeholder-shown) {
   z-index: 2;
   padding-bottom: 120px;
 }
+.promises__bg {
+  height: 540px;
+}
 .promises__wrap {
   position: relative;
 }
@@ -637,7 +640,7 @@ input:valid:not(:placeholder-shown) {
   position: relative;
   z-index: -1;
   width: 100%;
-  height: 540px;
+  height: 100%;
 }
 
 .reviews {
