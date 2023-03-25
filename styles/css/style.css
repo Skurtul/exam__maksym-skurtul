@@ -448,6 +448,7 @@ input:valid:not(:placeholder-shown) {
   font-weight: 300;
   color: rgba(38, 42, 63, 0.7);
   font-size: 14px;
+  height: 16px;
   line-height: 16px;
   padding-top: 14px;
 }
