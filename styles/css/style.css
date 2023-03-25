@@ -461,7 +461,7 @@ input:valid:not(:placeholder-shown) {
   display: none;
 }
 
-.input:invalid + .form__item-message .form__item-error {
+.input:invalid:not(:placeholder-shown) + .form__item-message .form__item-error {
   display: inline-block;
 }
 
